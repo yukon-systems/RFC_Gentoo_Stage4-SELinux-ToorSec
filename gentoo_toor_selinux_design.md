@@ -1,25 +1,8 @@
-# RFC1918's SELinux Components for Stage4 LLVM/Clang Builds
-
-## Templates and Other Fun
-This repo was created via Yukon's standard-defs template repo, and therefore includes defaults which can be found in the `.github` and `structs` directories.
-
-```text
-.github/ISSUE_TEMPLATE/
-.github/PULL_REQUEST_TEMPLATE/
-structs/opersys/git/
-```
-
-## **Operator Notes**
-- Start with `structs/opersys/git/github-templates-compliance.md` when adapting these standards into another YukonSYS repository.
-- Meat&Potatoes follow below..
-
----
-
 # Gentoo/OpenRC `toor` Superuser Enablement with SELinux, cgroups v2, BPF, and Portage Sub-Profile Control
 
-**Target platform:** Gentoo Linux, `amd64`, OpenRC, LLVM/Clang kernel build path, no systemd dependency
-**Target kernel families:** Linux `6.18.x` longterm and Linux `7.x` stable/current
-**Generated:** 2026-05-28 America/Los_Angeles
+**Target platform:** Gentoo Linux, `amd64`, OpenRC, LLVM/Clang kernel build path, no systemd dependency  
+**Target kernel families:** Linux `6.18.x` longterm and Linux `7.x` stable/current  
+**Generated:** 2026-05-28 America/Los_Angeles  
 **Companion script:** `gentoo_toor_selinux_bootstrap.py`
 
 ---
