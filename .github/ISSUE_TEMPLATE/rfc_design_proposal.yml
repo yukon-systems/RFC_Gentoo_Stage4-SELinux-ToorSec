@@ -1,0 +1,38 @@
+name: RFC / Design Proposal
+description: Propose a design, architecture change, standard, or operating model.
+title: "[RFC]: "
+labels:
+  - type/feature
+  - state/needs-triage
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this proposal solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the design or standard.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other approaches were considered and rejected?
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Tradeoffs / Risks
+      description: Complexity, cost, compatibility, security, operations, or reversibility.
+    validations:
+      required: true
+  - type: textarea
+    id: rollout
+    attributes:
+      label: Rollout / Validation
+      description: How should this be piloted, measured, and adopted?

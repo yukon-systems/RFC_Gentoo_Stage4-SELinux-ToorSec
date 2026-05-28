@@ -1,0 +1,31 @@
+name: Service Request
+description: Request access, provisioning, DNS, certificate, repository, or routine service work.
+title: "[Service Request]: "
+labels:
+  - type/service-request
+  - state/needs-triage
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Request
+      description: What service action is requested?
+    validations:
+      required: true
+  - type: textarea
+    id: requester-context
+    attributes:
+      label: Requester Context
+      description: Team, service, repo, environment, deadline, or business/operational reason.
+  - type: textarea
+    id: access
+    attributes:
+      label: Access / Secret Handling
+      description: Required access groups or secret backend names. Do not include secret values.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Completion Criteria
+      description: How should the requester validate the request is complete?
+    validations:
+      required: true

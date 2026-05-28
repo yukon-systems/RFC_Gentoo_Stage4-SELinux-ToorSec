@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security disclosure
+    url: https://github.com/yukon-systems/YukonSYS-Standard-Definitions/security/policy
+    about: Use the repository security policy for private vulnerability reports when available.
+  - name: YukonSYS standards catalog
+    url: https://github.com/yukon-systems/YukonSYS-Standard-Definitions
+    about: Review the standards catalog before requesting a new template family.

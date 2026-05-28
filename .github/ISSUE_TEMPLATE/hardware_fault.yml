@@ -1,0 +1,41 @@
+name: Hardware Fault
+description: Track server, storage, network, power, cabling, or peripheral faults.
+title: "[Hardware]: "
+labels:
+  - type/hardware
+  - state/needs-triage
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Fault Summary
+      description: What hardware behavior is abnormal?
+    validations:
+      required: true
+  - type: textarea
+    id: asset
+    attributes:
+      label: Asset Identity
+      description: Hostname, NetBox device, serial, service tag, rack/position, port, outlet, or cable ID.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: BMC, SMART, IPMI, Redfish, switch, PDU/UPS, logs, LEDs, or physical observations.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Services, redundancy, data safety, or operational limitations.
+  - type: textarea
+    id: action
+    attributes:
+      label: Proposed Action
+      description: Reseat, replace, firmware, cable move, power move, RMA, or monitoring.
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety / Change Notes
+      description: Required shutdowns, snapshots, backups, approvals, or rollback plan.

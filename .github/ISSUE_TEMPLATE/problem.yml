@@ -1,0 +1,45 @@
+name: Problem
+description: Investigate recurring incidents, unknown root cause, or systemic defects.
+title: "[Problem]: "
+labels:
+  - type/problem
+  - state/needs-triage
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem Summary
+      description: What recurring issue or unknown root cause needs investigation?
+    validations:
+      required: true
+  - type: textarea
+    id: related-incidents
+    attributes:
+      label: Related Incidents / Evidence
+      description: Link incidents, alerts, logs, metrics, or operator observations.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Pattern
+      description: Frequency, duration, affected systems, users, data, or operations.
+    validations:
+      required: true
+  - type: textarea
+    id: hypotheses
+    attributes:
+      label: Hypotheses
+      description: Suspected causes, disproven causes, and evidence gaps.
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Known Workaround
+      description: Temporary mitigation or recovery steps, if any.
+  - type: textarea
+    id: exit
+    attributes:
+      label: Exit Criteria
+      description: What evidence closes this problem record?
+    validations:
+      required: true

@@ -1,0 +1,49 @@
+name: Incident
+description: Capture an active or recent service incident.
+title: "[Incident]: "
+labels:
+  - type/incident
+  - state/needs-triage
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Incident Summary
+      description: What happened and what is the current state?
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - p0 - critical outage, safety risk, or data loss
+        - p1 - major service impact
+        - p2 - degraded service or contained impact
+        - p3 - minor impact
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Users, systems, services, data, or operations affected.
+    validations:
+      required: true
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: Known event times in absolute timestamps where possible.
+      placeholder: |
+        - YYYY-MM-DD HH:MM TZ - ...
+  - type: textarea
+    id: current-actions
+    attributes:
+      label: Current Actions
+      description: Mitigation, restoration, communications, and owners.
+  - type: textarea
+    id: follow-up
+    attributes:
+      label: Follow-Up Required
+      description: Post-incident review, permanent fixes, or monitoring gaps.

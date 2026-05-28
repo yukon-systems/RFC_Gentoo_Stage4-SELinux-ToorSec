@@ -1,0 +1,50 @@
+name: Bug / Defect
+description: Report incorrect behavior, regression, or broken documentation.
+title: "[Bug]: "
+labels:
+  - type/bug
+  - state/needs-triage
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is broken?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Commands, logs, screenshots, or links. Do not include secrets.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Repo, branch, host, OS, runtime, browser, device, or service context.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - p0 - critical outage or data loss
+        - p1 - urgent production impact
+        - p2 - important but contained
+        - p3 - normal
+        - p4 - low priority
+    validations:
+      required: true

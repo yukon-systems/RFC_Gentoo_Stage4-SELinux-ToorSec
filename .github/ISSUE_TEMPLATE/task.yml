@@ -1,0 +1,40 @@
+name: Task
+description: Track a bounded implementation, documentation, or operations task.
+title: "[Task]: "
+labels:
+  - type/task
+  - state/needs-triage
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What needs to be completed?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included and excluded?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: What evidence proves completion?
+      placeholder: |
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation Plan
+      description: Commands, checks, or review gates expected before close.
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies / Blockers
+      description: Required access, hardware, services, secrets by backend name, or prior work.

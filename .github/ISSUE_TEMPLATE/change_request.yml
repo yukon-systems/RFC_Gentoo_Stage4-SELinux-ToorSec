@@ -1,0 +1,52 @@
+name: Change Request
+description: Request a planned infrastructure, service, security, or automation change.
+title: "[Change]: "
+labels:
+  - type/change
+  - state/needs-approval
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Change Summary
+      description: What change is proposed?
+    validations:
+      required: true
+  - type: dropdown
+    id: class
+    attributes:
+      label: Change Class
+      options:
+        - standard - low-risk repeatable change
+        - normal - planned review required
+        - emergency - urgent restoration or containment
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope / Blast Radius
+      description: Systems, repos, hosts, networks, services, users, or data affected.
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk And Mitigation
+      description: Main risks, mitigations, and assumptions.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation Plan
+      description: Pre-checks, check-mode, smoke tests, idempotence checks, and monitoring.
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Rollback / Recovery Plan
+      description: Decision point, rollback steps, and post-rollback validation.
+    validations:
+      required: true

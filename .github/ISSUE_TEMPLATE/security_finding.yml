@@ -1,0 +1,48 @@
+name: Security Finding
+description: Track a non-private security finding that can be safely discussed in the repository.
+title: "[Security]: "
+labels:
+  - type/security
+  - state/needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include exploit-ready details, credentials, private keys, tokens,
+        or sensitive logs. Use the private security disclosure path when needed.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Finding Summary
+      description: Safe, high-level description of the issue.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - critical
+        - high
+        - medium
+        - low
+        - informational
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected Scope
+      description: Repos, services, hosts, components, or data classes affected.
+    validations:
+      required: true
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Mitigation / Remediation
+      description: Proposed safe remediation or containment.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: How to confirm the finding is remediated without exposing secrets.
